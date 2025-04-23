@@ -1,0 +1,12 @@
+@startuml
+actor Usuario
+usecase "Alta paciente" as Alta
+usecase "Consultar paciente" as Consultar
+usecase "Modificar paciente" as Modificar
+usecase "Eliminar paciente" as Eliminar
+
+Usuario --> Alta
+Alta .> Consultar : <<extend>>
+Alta .> Modificar : <<extend>>
+Alta .> Eliminar : <<extend>>
+@enduml
